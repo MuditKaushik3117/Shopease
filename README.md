@@ -145,7 +145,7 @@ screenshots/wishlist.png
 
 ## 🛒 Shopping Cart
 
-![Cart](screenshots/shoppingcart.png)
+![Cart](screenshots/cart.png)
 
 ```
 screenshots/cart.png
