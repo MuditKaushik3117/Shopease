@@ -115,7 +115,7 @@ ShopEase
 
 ## 🏠 Home Page
 
-> Add screenshot here
+![Home](screenshots/home.png)
 
 ```
 screenshots/home.png
@@ -125,7 +125,7 @@ screenshots/home.png
 
 ## 📦 Product Details
 
-> Add screenshot here
+![Product](screenshots/product.png)
 
 ```
 screenshots/product.png
@@ -135,7 +135,7 @@ screenshots/product.png
 
 ## ❤️ Wishlist
 
-> Add screenshot here
+![Wishlist](screenshots/wishlist.png)
 
 ```
 screenshots/wishlist.png
@@ -145,7 +145,7 @@ screenshots/wishlist.png
 
 ## 🛒 Shopping Cart
 
-> Add screenshot here
+![Cart](screenshots/shoppingcart.png)
 
 ```
 screenshots/cart.png
@@ -155,7 +155,7 @@ screenshots/cart.png
 
 ## 💳 Checkout
 
-> Add screenshot here
+![Checkout](screenshots/checkout.png)
 
 ```
 screenshots/checkout.png
@@ -165,7 +165,7 @@ screenshots/checkout.png
 
 ## 📜 Orders
 
-> Add screenshot here
+![Orders](screenshots/orders.png)
 
 ```
 screenshots/orders.png
@@ -255,7 +255,7 @@ This project helped me understand:
 
 ## Mudit Kaushik
 
-Software Developer | Cybersecurity Enthusiast
+Software Developer | Cybersecurity Analyst
 
 GitHub
 
@@ -263,7 +263,7 @@ https://github.com/MuditKaushik3117
 
 LinkedIn
 
-> Add your LinkedIn profile
+https://www.linkedin.com/in/mudit-kaushik-72b820299/
 
 ---
 
@@ -278,5 +278,7 @@ If you found this project useful, consider giving it a ⭐ on GitHub!
 Made with ❤️ using Next.js & Express.js
 
 </div>
+
+
 
 
