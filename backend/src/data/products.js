@@ -61,7 +61,7 @@ module.exports = [
     price: 899,
     category: "Office",
     stock: 30,
-    image: "https://images.unsplash.com/photo-1632292224971-0d45778b3002?w=500",
+    image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?w=500",
   },
   {
     id: 9,
@@ -101,7 +101,7 @@ module.exports = [
     price: 6499,
     category: "Accessories",
     stock: 18,
-    image: "https://images.unsplash.com/photo-1597872200969-2b65dff80241?w=500",
+    image: "https://images.unsplash.com/photo-1618424181497-157f25b6ddd5?w=500",
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ module.exports = [
     price: 1999,
     category: "Accessories",
     stock: 16,
-    image: "https://images.unsplash.com/photo-1622445262465-2481c4574875?w=500",
+    image: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500",
   },
   {
     id: 15,
