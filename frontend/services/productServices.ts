@@ -1,6 +1,8 @@
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
 export async function getProducts() {
     const response = await fetch(
-      "http://localhost:5000/api/products"
+      `${API_URL}/api/products`
     );
   
     return response.json();
@@ -8,7 +10,7 @@ export async function getProducts() {
   
   export async function getProductById(id: string) {
     const response = await fetch(
-      `http://localhost:5000/api/products/${id}`
+      `${API_URL}/api/products/${id}`
     );
   
     return response.json();
