@@ -31,56 +31,55 @@ This project was built as a portfolio project to showcase full-stack development
 # ✨ Features
 
 ### 🛍 Shopping
+- Browse Products (Expanded 16-item catalog)
+- Product Details (Rating stars, stock badges, specifications table)
+- Search Products (Real-time dynamic filtering)
+- Category Filtering (Interactive gradient button selectors)
 
-- Browse Products
-- Product Details
-- Search Products
-- Category Filtering
-
-### ❤️ User Features
-
-- Wishlist
-- Shopping Cart
-- Checkout
-- Order History
+### ❤️ User Features & State
+- Wishlist (Unified state, quick add/remove, "Move to Cart" utility)
+- Shopping Cart (Unified state, checkout summaries, shipping thresholds, promo codes)
+- Checkout (Shipping fields, payment cards, secure validation)
+- Order History (Accordion receipt design with payment tracking)
 
 ### 👤 Authentication
+- Demo Login (Multi-user account database logic, email validation, credentials checking)
+- Demo Registration (Automatic user sign-in and direct profile routing)
+- User Profile Dashboard (Avatars, quick dashboard menus, logout actions)
 
-- Demo Login
-- Demo Registration
-- User Profile
-- Logout
+### 💳 Payments Integration
+- **Razorpay Checkout Gateway**: Secure payment integration supporting UPI, Cards, and NetBanking in Sandbox/Test Mode.
+- **Dynamic SDK Loading**: Asynchronous loading of official Razorpay SDK on-demand.
+- **Prototyping Modal Fallback**: Inline mock overlay payment dialog mimicking Razorpay's checkout flow for seamless test runs when API keys are not present in `.env`.
+- **Signature Verification**: Express backend cryptographic signature matching utilizing HMAC-SHA256 hashes.
 
 ### 🎨 UI/UX
-
-- Responsive Design
-- Modern Hero Section
-- Professional Navbar
-- Footer
-- Loading Screen
-- 404 Page
+- Responsive Design (Overhauled using Tailwind CSS v4)
+- Sticky glassmorphic Blur Navbar with dynamic item count badges
+- Plus Jakarta Sans premium typography
+- Dynamic micro-interactions powered by `react-hot-toast`
 
 ---
 
 # 🛠 Tech Stack
 
 ## Frontend
-
 - Next.js (App Router)
 - React
 - TypeScript
 - Tailwind CSS
 - Context API
+- Lucide React (Modern icon library)
+- React Hot Toast (Micro-interaction alerts)
 
 ## Backend
-
 - Node.js
 - Express.js
+- Razorpay Node SDK (Payment integration)
 
 ## Data Storage
-
-- JSON File (Mock Backend)
-- Browser LocalStorage
+- JSON Local Database (Mock Backend)
+- Browser LocalStorage (Cart, Wishlist, User Accounts, and Order histories)
 
 ---
 
