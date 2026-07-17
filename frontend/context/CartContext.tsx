@@ -36,11 +36,9 @@ export function CartProvider({
   }, []);
 
   const addToCart = (product: any) => {
-    setCart((prev) => {
-      const updated = [...prev, product];
-      localStorage.setItem("cart", JSON.stringify(updated));
-      return updated;
-    });
+    const updated = [...cart, product];
+    setCart(updated);
+    localStorage.setItem("cart", JSON.stringify(updated));
     toast.success(`${product.name} added to cart!`, {
       icon: "🛒",
       style: {
@@ -54,11 +52,9 @@ export function CartProvider({
   };
 
   const removeFromCart = (index: number) => {
-    setCart((prev) => {
-      const updated = prev.filter((_, i) => i !== index);
-      localStorage.setItem("cart", JSON.stringify(updated));
-      return updated;
-    });
+    const updated = cart.filter((_, i) => i !== index);
+    setCart(updated);
+    localStorage.setItem("cart", JSON.stringify(updated));
     toast.success("Item removed from cart.", {
       style: {
         borderRadius: "12px",
@@ -76,24 +72,9 @@ export function CartProvider({
   };
 
   const addToWishlist = (product: any) => {
-    setWishlist((prev) => {
-      // Avoid duplicates
-      if (prev.some((item) => item.id === product.id)) {
-        toast(`${product.name} is already in wishlist!`, {
-          icon: "❤️",
-          style: {
-            borderRadius: "12px",
-            background: "#0f172a",
-            color: "#fff",
-            fontSize: "14px",
-            fontWeight: "500",
-          },
-        });
-        return prev;
-      }
-      const updated = [...prev, product];
-      localStorage.setItem("wishlist", JSON.stringify(updated));
-      toast.success(`${product.name} added to wishlist!`, {
+    // Avoid duplicates
+    if (wishlist.some((item) => item.id === product.id)) {
+      toast(`${product.name} is already in wishlist!`, {
         icon: "❤️",
         style: {
           borderRadius: "12px",
@@ -103,16 +84,27 @@ export function CartProvider({
           fontWeight: "500",
         },
       });
-      return updated;
+      return;
+    }
+    const updated = [...wishlist, product];
+    setWishlist(updated);
+    localStorage.setItem("wishlist", JSON.stringify(updated));
+    toast.success(`${product.name} added to wishlist!`, {
+      icon: "❤️",
+      style: {
+        borderRadius: "12px",
+        background: "#0f172a",
+        color: "#fff",
+        fontSize: "14px",
+        fontWeight: "500",
+      },
     });
   };
 
   const removeFromWishlist = (id: number) => {
-    setWishlist((prev) => {
-      const updated = prev.filter((item) => item.id !== id);
-      localStorage.setItem("wishlist", JSON.stringify(updated));
-      return updated;
-    });
+    const updated = wishlist.filter((item) => item.id !== id);
+    setWishlist(updated);
+    localStorage.setItem("wishlist", JSON.stringify(updated));
     toast.success("Removed from wishlist.", {
       style: {
         borderRadius: "12px",
