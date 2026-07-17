@@ -7,6 +7,8 @@ import { ShieldCheck, ArrowLeft, Truck, Landmark, Wallet, CreditCard, Loader2, C
 import Link from "next/link";
 import toast from "react-hot-toast";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
 // Helper function to dynamically load Razorpay script
 const loadRazorpayScript = () => {
   return new Promise((resolve) => {
@@ -110,7 +112,7 @@ export default function CheckoutPage() {
   const handleRazorpayPayment = async () => {
     try {
       // 1. Create order on the backend
-      const orderResponse = await fetch("http://localhost:5000/api/payments/order", {
+      const orderResponse = await fetch(`${API_URL}/api/payments/order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount: total }),
@@ -187,7 +189,7 @@ export default function CheckoutPage() {
   // Helper to verify payment details on the backend
   const verifyPaymentOnBackend = async (paymentId: string, orderId: string, signature: string) => {
     try {
-      const verifyResponse = await fetch("http://localhost:5000/api/payments/verify", {
+      const verifyResponse = await fetch(`${API_URL}/api/payments/verify`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
