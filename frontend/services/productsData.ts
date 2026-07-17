@@ -1,4 +1,13 @@
-module.exports = [
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  category: string;
+  stock: number;
+  image: string;
+}
+
+export const products: Product[] = [
   {
     id: 1,
     name: "Wireless Ergonomic Mouse",

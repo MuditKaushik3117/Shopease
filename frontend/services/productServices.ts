@@ -1,19 +1,15 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+import { products } from "./productsData";
 
 export async function getProducts() {
-    const response = await fetch(
-      `${API_URL}/api/products`
-    );
-  
-    return response.json();
+  return products;
+}
+
+export async function getProductById(id: string) {
+  const product = products.find((p) => p.id === Number(id));
+  if (!product) {
+    throw new Error("Product not found");
   }
-  
-  export async function getProductById(id: string) {
-    const response = await fetch(
-      `${API_URL}/api/products/${id}`
-    );
-  
-    return response.json();
-  }
+  return product;
+}
 
   

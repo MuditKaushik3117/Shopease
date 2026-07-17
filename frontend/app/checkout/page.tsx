@@ -7,7 +7,7 @@ import { ShieldCheck, ArrowLeft, Truck, Landmark, Wallet, CreditCard, Loader2, C
 import Link from "next/link";
 import toast from "react-hot-toast";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 // Helper function to dynamically load Razorpay script
 const loadRazorpayScript = () => {
